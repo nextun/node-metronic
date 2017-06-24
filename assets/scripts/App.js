@@ -1,0 +1,1 @@
+import NotificationsModule from './modules/NotificationsModule';
