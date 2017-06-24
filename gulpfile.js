@@ -9,6 +9,7 @@ var rename = require("gulp-rename");
 var uglify = require("gulp-uglify");
 var rtlcss = require("gulp-rtlcss");  
 var connect = require('gulp-connect');
+var concat = require('gulp-concat');
 
 //*** Localhost server tast
 gulp.task('localhost', function() {
@@ -121,12 +122,20 @@ gulp.task('rtlcss', function () {
 
 //*** HTML formatter task
 gulp.task('prettify', function() {
-  	
-  	gulp.src('./**/*.html').
-  	  	pipe(prettify({
-    		indent_size: 4, 
-    		indent_inner_html: true,
-    		unformatted: ['pre', 'code']
-   		})).
-   		pipe(gulp.dest('./'));
+
+    gulp.src('./**/*.html').
+    pipe(prettify({
+        indent_size: 4,
+        indent_inner_html: true,
+        unformatted: ['pre', 'code']
+    })).
+    pipe(gulp.dest('./'));
+});
+
+//*** HTML formatter task
+gulp.task('scripts', function() {
+
+    gulp.src('./assets/**/*.js')
+    .pipe(concat('All.js'))
+        .pipe(gulp.dest('./assets/scripts/'));
 });
