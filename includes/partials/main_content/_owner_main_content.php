@@ -58,7 +58,7 @@
                                     <div class="col-sm-12 col-md-6" style="margin: 5px 0;">
                                         <!-- INFO FOR DATERANGEPICKER http://www.daterangepicker.com/  -->
                                         <div class="input-group" id="defaultrange">
-                                            <input type="text" class="form-control" style="display: inline" value="<?php echo date('01 d, Y') ?> - <?php echo date('d/m/Y') ?>">
+                                            <input type="text" class="form-control" style="display: inline" value="<?php echo date('F 01, Y') ?> - <?php echo date('F d, Y') ?>">
                                             <span class="input-group-btn">
                                                 <button class="btn default date-range-toggle" type="button">
                                                     <i class="fa fa-calendar"></i>

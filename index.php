@@ -130,6 +130,9 @@ $debug = 1;
         <!-- END THE CUSTOM PLUGIN SCRIPTS -->
 
         <!-- END THEME LAYOUT SCRIPTS -->
+        <!-- START WEBPACK EXPORT -->
+        <script src="/includes/scripts/all.js"></script>
+        <!-- END WEBPACK EXPORT -->
         <pre>
         <?php
             if($debug){

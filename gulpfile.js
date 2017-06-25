@@ -9,7 +9,8 @@ var rename = require("gulp-rename");
 var uglify = require("gulp-uglify");
 var rtlcss = require("gulp-rtlcss");  
 var connect = require('gulp-connect');
-var concat = require('gulp-concat');
+var concat = require('gulp-concat'),
+scripts = require('./gulp/scripts.js');
 
 //*** Localhost server tast
 gulp.task('localhost', function() {
@@ -130,12 +131,4 @@ gulp.task('prettify', function() {
         unformatted: ['pre', 'code']
     })).
     pipe(gulp.dest('./'));
-});
-
-//*** HTML formatter task
-gulp.task('scripts', function() {
-
-    gulp.src('./assets/**/*.js')
-    .pipe(concat('All.js'))
-        .pipe(gulp.dest('./assets/scripts/'));
 });

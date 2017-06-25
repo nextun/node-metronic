@@ -1,1 +1,3 @@
-alert('This is from webpack');
+import NotificationsMenu from './modules/NotificationsMenu';
+
+var notificationsMenu = new NotificationsMenu();
