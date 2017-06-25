@@ -47,28 +47,30 @@
 
                     <div class="portlet-body">
                         <div class="row">
-                            <div class="inputs" style="padding-top: 0px;">
-                                <form action="#" method="post" name="runReportForm" id="runReportForm" novalidate="novalidate">
-                                    <div class="col-sm-12 col-md-6" style="margin: 5px 0">
-                                        <select name="whichSalon" id="whichSalon" class="form-control valid" aria-required="true">
-                                            <option value="all">All Salons</option>
-                                            <option value="42">CanTan Greenwood</option><option value="43">CanTan Anlaby</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-sm-12 col-md-6" style="margin: 5px 0;">
-                                        <!-- INFO FOR DATERANGEPICKER http://www.daterangepicker.com/  -->
-                                        <div class="input-group" id="defaultrange">
-                                            <input type="text" class="form-control" style="display: inline" value="<?php echo date('F 01, Y') ?> - <?php echo date('F d, Y') ?>">
-                                            <span class="input-group-btn">
+                            <div class="dashboard__datepicker">
+                                <div class="inputs" style="padding-top: 0px;">
+                                    <form action="#" method="post" name="runReportForm" id="runReportForm" novalidate="novalidate">
+                                        <div class="col-sm-12 col-md-6" style="margin: 5px 0">
+                                            <select name="whichSalon" id="whichSalon" class="form-control valid" aria-required="true">
+                                                <option value="all">All Salons</option>
+                                                <option value="42">CanTan Greenwood</option><option value="43">CanTan Anlaby</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-12 col-md-6" style="margin: 5px 0;">
+                                            <!-- INFO FOR DATERANGEPICKER http://www.daterangepicker.com/  -->
+                                            <div class="input-group" id="defaultrange">
+                                                <input type="text" class="form-control" style="display: inline" value="<?php echo date('F 01, Y') ?> - <?php echo date('F d, Y') ?>">
+                                                <span class="input-group-btn">
                                                 <button class="btn default date-range-toggle" type="button">
                                                     <i class="fa fa-calendar"></i>
                                                 </button>
                                             </span>
-<!--                                            <input type="submit" value="Go" class="btn btn-outline red pull-left btn-block" style="display: inline">-->
+                                                <!--                                            <input type="submit" value="Go" class="btn btn-outline red pull-left btn-block" style="display: inline">-->
+                                            </div>
                                         </div>
-                                    </div>
-                                </form>
+                                    </form>
 
+                                </div>
                             </div>
                         </div>
 

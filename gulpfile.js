@@ -9,20 +9,52 @@ var rename = require("gulp-rename");
 var uglify = require("gulp-uglify");
 var rtlcss = require("gulp-rtlcss");  
 var connect = require('gulp-connect');
-var concat = require('gulp-concat'),
-scripts = require('./gulp/scripts.js');
+var concat = require('gulp-concat');
+
+var postcss = require('gulp-postcss'),
+scripts = require('./gulp/scripts.js'),
+watch = require('gulp-watch'),
+styles = require('./gulp/styles'),
+php = require('gulp-connect-php'),
+browserSync = require('browser-sync'),
+reload  = browserSync.reload;
+
+gulp.task('php', function() {
+    php.server({ base: './', port: 3000, keepalive: true});
+});
+
+gulp.task('browser-sync',['php'], function() {
+    browserSync({
+        proxy: '127.0.0.1:3000',
+        port: 8080,
+        open: false,
+        notify: false
+    });
+
+    // browserSync.init({
+    //    server: {
+    //        baseDir: '/',
+    //    }
+    // });
+});
+gulp.task('default', ['browser-sync'], function () {
+    gulp.watch(['./*.php'], [reload]);
+});
 
 //*** Localhost server tast
-gulp.task('localhost', function() {
-  connect.server();
-});
+// gulp.task('localhost', function() {
+//   connect.server();
+// });
+//
+// gulp.task('localhost-live', function() {
+//   connect.server({
+//     livereload: true
+//   });
+// });
 
-gulp.task('localhost-live', function() {
-  connect.server({
-    livereload: true
-  });
-});
 
+
+// gulp.start('scripts');
 //*** SASS compiler task
 gulp.task('sass', function () {
   // bootstrap compilation
@@ -81,7 +113,7 @@ gulp.task('minify', function () {
     gulp.src(['./assets/layouts/**/scripts/*.js','!./assets/layouts/**/scripts/*.min.js']).pipe(uglify()).pipe(rename({suffix: '.min'})).pipe(gulp.dest('./assets/layouts/'));
 });
 
-//*** RTL convertor task
+//*** RTL converter task
 gulp.task('rtlcss', function () {
 
   gulp
@@ -131,4 +163,14 @@ gulp.task('prettify', function() {
         unformatted: ['pre', 'code']
     })).
     pipe(gulp.dest('./'));
+});
+
+gulp.task('watch', function(){
+    gulp.watch('./assets/scripts/**/*.js', function(){
+        gulp.start('scripts');
+    });
+
+    gulp.watch('./assets/styles/**/*.css', function(){
+        gulp.start('styles');
+    });
 });

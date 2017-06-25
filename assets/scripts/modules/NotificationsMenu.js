@@ -4,7 +4,6 @@ class NotificationsMenu {
         this.notificationsMenu = $('.dropdown-notification');
         this.events();
     }
-
     events(){
         this.notificationsMenu.click(
                 () => {
