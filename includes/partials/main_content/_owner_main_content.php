@@ -48,28 +48,33 @@
                     <div class="portlet-body">
                         <div class="row">
                             <div class="dashboard__datepicker">
-                                <div class="inputs" style="padding-top: 0px;">
-                                    <form action="#" method="post" name="runReportForm" id="runReportForm" novalidate="novalidate">
-                                        <div class="col-sm-12 col-md-6" style="margin: 5px 0">
-                                            <select name="whichSalon" id="whichSalon" class="form-control valid" aria-required="true">
-                                                <option value="all">All Salons</option>
-                                                <option value="42">CanTan Greenwood</option><option value="43">CanTan Anlaby</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-sm-12 col-md-6" style="margin: 5px 0;">
-                                            <!-- INFO FOR DATERANGEPICKER http://www.daterangepicker.com/  -->
-                                            <div class="input-group" id="defaultrange">
-                                                <input type="text" class="form-control" style="display: inline" value="<?php echo date('F 01, Y') ?> - <?php echo date('F d, Y') ?>">
-                                                <span class="input-group-btn">
+                                <div class="dashboard__datepicker__inputs">
+                                    <div class="inputs">
+                                        <form action="#" method="post" name="runReportForm" id="runReportForm" novalidate="novalidate">
+                                            <div class="col-sm-12 col-md-6" style="margin: 5px 0">
+                                                <select name="whichSalon" id="whichSalon" class="form-control valid" aria-required="true">
+                                                    <option value="all">All Salons</option>
+                                                    <option value="42">CanTan Greenwood</option><option value="43">CanTan Anlaby</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-sm-12 col-md-6" style="margin: 5px 0;">
+                                                <!-- INFO FOR DATERANGEPICKER http://www.daterangepicker.com/  -->
+                                                <div class="input-group" id="defaultrange">
+                                                    <input type="text" class="form-control" style="display: inline" value="<?php echo date('F 01, Y') ?> - <?php echo date('F d, Y') ?>">
+                                                    <span class="input-group-btn">
                                                 <button class="btn default date-range-toggle" type="button">
                                                     <i class="fa fa-calendar"></i>
                                                 </button>
                                             </span>
-                                                <!--                                            <input type="submit" value="Go" class="btn btn-outline red pull-left btn-block" style="display: inline">-->
+                                                    <!--                                            <input type="submit" value="Go" class="btn btn-outline red pull-left btn-block" style="display: inline">-->
+                                                </div>
                                             </div>
-                                        </div>
-                                    </form>
+                                        </form>
 
+                                    </div>
+                                </div>
+                                <div class="dashboard__datepicker__inputs__trigger">
+                                    <button class="btn btn-outline red pull-right">Select Period</button>
                                 </div>
                             </div>
                         </div>
@@ -230,10 +235,106 @@
         </div>
         <!-- END THE REVENUE OVER TIME GRAPH SECTION -->
 
+        <!-- START THE M GRID TEST -->
+
+        <div class="m-grid m-grid-demo">
+            <div class="m-grid-row">
+                <div class="m-grid-col-sm-12 m-grid-col-md-12 m-grid-col-lg-6 m-grid-col m-grid-col-top m-grid-col-center">
+
+                    <div class="portlet light" style="height: 100%; ">
+
+                        <div class="portlet-title">
+
+                            <div class="caption">
+
+                                <i class="fa fa-clock-o font-blue-sharp"></i>
+
+                                <span class="caption-subject bold font-grey-gallery uppercase"> Test One </span>
+
+                                <span class="caption-helper"></span>
+
+                            </div>
+
+                            <div class="tools">
+
+                                <a class="collapse" href="" data-original-title="" title=""> </a>
+
+                                <a class="reload" href="" data-original-title="" title=""> </a>
+
+                                <a class="fullscreen" href="" data-original-title="" title=""> </a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="portlet-body">
+
+                            <div>
+
+                                Test 1
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="m-grid-col-sm-12 m-grid-col-md-12 m-grid-col-lg-6 m-grid-col m-grid-col-top m-grid-col-center">
+
+                    <div class="portlet light" style="height: 100%">
+
+                        <div class="portlet-title">
+
+                            <div class="caption">
+
+                                <i class="fa fa-clock-o font-blue-sharp"></i>
+
+                                <span class="caption-subject bold font-grey-gallery uppercase"> Test Two </span>
+
+                                <span class="caption-helper"></span>
+
+                            </div>
+
+                            <div class="tools">
+
+                                <a class="collapse" href="" data-original-title="" title=""> </a>
+
+                                <a class="reload" href="" data-original-title="" title=""> </a>
+
+                                <a class="fullscreen" href="" data-original-title="" title=""> </a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="portlet-body">
+
+                            <div>
+
+                                Test 1<br />
+                                Test 1<br />
+                                Test 1<br />
+                                Test 1<br />
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+
+        <br />
+        <!-- END THE M GRID TEST -->
+
         <!-- START THE RECENT REFERRERS AND SESSIONS SECTION -->
         <div class="row">
 
-            <div class="col-sm-12 col-md-12 col-lg-6">
+            <div class="col-sm-12 col-md-12 col-lg-6 ">
 
                 <div class="portlet light">
 
@@ -265,16 +366,18 @@
 
                         <div>
 
-                            <table class="table table-hover table-light">
-                                <thead>
-                                <tr>
-                                    <th> Name </th>
-                                    <th> Bed </th>
-                                    <th> Duration </th>
-                                </tr>
-                                </thead>
-                                <tbody id="recentSessionsTable"><tr><td> Mark Jubb </td><td> Bed 2 </td><td> 6 </td></tr><tr><td> Julie Khaliq </td><td> Bed 1 </td><td> 12 </td></tr><tr><td> Nicola Dalee </td><td> Bed 3 </td><td> 9 </td></tr><tr><td> Shona Lund </td><td> Bed 3 </td><td> 9 </td></tr><tr><td> Tanyar Guzqeu </td><td> Bed 1 </td><td> 9 </td></tr><tr><td> Laura Rand </td><td> Bed 1 </td><td> 9 </td></tr><tr><td> Agnieszka Glinska </td><td> Bed 1 </td><td> 9 </td></tr><tr><td> Dean Sanders </td><td> Bed 2 </td><td> 6 </td></tr><tr><td> Paul Coney </td><td> Bed 3 </td><td> 9 </td></tr><tr><td> Petra Bendova </td><td> Bed 1 </td><td> 9 </td></tr></tbody>
-                            </table>
+                            <div class="table-responsive">
+                                <table class="table table-hover table-light">
+                                    <thead>
+                                    <tr>
+                                        <th> Name </th>
+                                        <th> Bed </th>
+                                        <th> Duration </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="recentSessionsTable"><tr><td> Mark Jubb </td><td> Bed 2 </td><td> 6 </td></tr><tr><td> Julie Khaliq </td><td> Bed 1 </td><td> 12 </td></tr><tr><td> Nicola Dalee </td><td> Bed 3 </td><td> 9 </td></tr><tr><td> Shona Lund </td><td> Bed 3 </td><td> 9 </td></tr><tr><td> Tanyar Guzqeu </td><td> Bed 1 </td><td> 9 </td></tr><tr><td> Laura Rand </td><td> Bed 1 </td><td> 9 </td></tr><tr><td> Agnieszka Glinska </td><td> Bed 1 </td><td> 9 </td></tr><tr><td> Dean Sanders </td><td> Bed 2 </td><td> 6 </td></tr><tr><td> Paul Coney </td><td> Bed 3 </td><td> 9 </td></tr><tr><td> Petra Bendova </td><td> Bed 1 </td><td> 9 </td></tr></tbody>
+                                </table>
+                            </div>
 
                         </div>
 
@@ -364,16 +467,18 @@
 
                         <div>
 
-                            <table class="table table-hover table-light">
-                                <thead>
-                                <tr>
-                                    <th> Product Name </th>
-                                    <th> Amount </th>
-                                    <th> Customer </th>
-                                </tr>
-                                </thead>
-                                <tbody id="recentProductPurchasesTable"><tr><td> Unbelievably bl... </td><td> £2.00 </td><td> Dean Sanders </td></tr><tr><td> Hemp pot shot... </td><td> £1.00 </td><td> Sophie Foster </td></tr><tr><td> Hemp pot shot... </td><td> £1.00 </td><td> Karen Sowersby </td></tr><tr><td> Hemp pot shot... </td><td> £1.00 </td><td> Demi Und </td></tr><tr><td> Hemp pot shot... </td><td> £1.00 </td><td> Hayley Fox </td></tr></tbody>
-                            </table>
+                            <div class="table-responsive">
+                                <table class="table table-hover table-light">
+                                    <thead>
+                                    <tr>
+                                        <th> Product Name </th>
+                                        <th> Amount </th>
+                                        <th> Customer </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="recentProductPurchasesTable"><tr><td> Unbelievably bl... </td><td> £2.00 </td><td> Dean Sanders </td></tr><tr><td> Hemp pot shot... </td><td> £1.00 </td><td> Sophie Foster </td></tr><tr><td> Hemp pot shot... </td><td> £1.00 </td><td> Karen Sowersby </td></tr><tr><td> Hemp pot shot... </td><td> £1.00 </td><td> Demi Und </td></tr><tr><td> Hemp pot shot... </td><td> £1.00 </td><td> Hayley Fox </td></tr></tbody>
+                                </table>
+                            </div>
 
                         </div>
 
@@ -415,16 +520,18 @@
 
                         <div>
 
-                            <table class="table table-hover table-light">
-                                <thead>
-                                <tr>
-                                    <th> Package Name </th>
-                                    <th> Amount </th>
-                                    <th> Customer </th>
-                                </tr>
-                                </thead>
-                                <tbody id="recentPackagePurchasesTable"><tr><td> 105 Minutes </td><td> £30.00 </td><td> Nicola Dalee </td></tr><tr><td> 35 Minutes </td><td> £10.00 </td><td> Laura Rand </td></tr><tr><td> Monthly Unlimited </td><td> £40.00 </td><td> Steph Jubb </td></tr><tr><td> 75 Minutes </td><td> £20.00 </td><td> Petra Bendova </td></tr><tr><td> 3 Minutes </td><td> £1.00 </td><td> Gemma Moverley </td></tr></tbody>
-                            </table>
+                            <div class="table-responsive">
+                                <table class="table table-hover table-light">
+                                    <thead>
+                                    <tr>
+                                        <th> Package Name </th>
+                                        <th> Amount </th>
+                                        <th> Customer </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="recentPackagePurchasesTable"><tr><td> 105 Minutes </td><td> £30.00 </td><td> Nicola Dalee </td></tr><tr><td> 35 Minutes </td><td> £10.00 </td><td> Laura Rand </td></tr><tr><td> Monthly Unlimited </td><td> £40.00 </td><td> Steph Jubb </td></tr><tr><td> 75 Minutes </td><td> £20.00 </td><td> Petra Bendova </td></tr><tr><td> 3 Minutes </td><td> £1.00 </td><td> Gemma Moverley </td></tr></tbody>
+                                </table>
+                            </div>
 
                         </div>
 

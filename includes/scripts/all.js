@@ -60,65 +60,11 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _NotificationsMenu = __webpack_require__(1);
-
-var _NotificationsMenu2 = _interopRequireDefault(_NotificationsMenu);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var notificationsMenu = new _NotificationsMenu2.default();
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var $ = __webpack_require__(2);
-
-var NotificationsMenu = function () {
-    function NotificationsMenu() {
-        _classCallCheck(this, NotificationsMenu);
-
-        this.notificationsMenu = $('.dropdown-notification');
-        this.events();
-    }
-
-    _createClass(NotificationsMenu, [{
-        key: 'events',
-        value: function events() {
-            this.notificationsMenu.click(function () {
-                console.log('Notifications clicked');
-            });
-        }
-    }]);
-
-    return NotificationsMenu;
-}();
-
-exports.default = NotificationsMenu;
-
-/***/ }),
-/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -10376,6 +10322,130 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _NotificationsMenu = __webpack_require__(2);
+
+var _NotificationsMenu2 = _interopRequireDefault(_NotificationsMenu);
+
+var _DashboardDatepicker = __webpack_require__(3);
+
+var _DashboardDatepicker2 = _interopRequireDefault(_DashboardDatepicker);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var notificationsMenu = new _NotificationsMenu2.default();
+var dashboardDatepicker = new _DashboardDatepicker2.default();
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var $ = __webpack_require__(0);
+
+var NotificationsMenu = function () {
+    function NotificationsMenu() {
+        _classCallCheck(this, NotificationsMenu);
+
+        this.notificationsMenu = $('.dropdown-notification');
+        this.events();
+    }
+
+    _createClass(NotificationsMenu, [{
+        key: 'events',
+        value: function events() {
+            this.notificationsMenu.click(function () {
+                console.log('We can load the notifications on this call');
+            });
+        }
+    }]);
+
+    return NotificationsMenu;
+}();
+
+exports.default = NotificationsMenu;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var DashboardDatepicker = function () {
+    function DashboardDatepicker() {
+        _classCallCheck(this, DashboardDatepicker);
+
+        this.pickerButton = (0, _jquery2.default)('.dashboard__datepicker__inputs__trigger');
+        this.pickerInputs = (0, _jquery2.default)('.dashboard__datepicker__inputs');
+        this.document = (0, _jquery2.default)(document);
+
+        this.events();
+    }
+
+    _createClass(DashboardDatepicker, [{
+        key: 'events',
+        value: function events() {
+            var _this = this;
+
+            this.pickerButton.click(function () {
+                return _this.showDatepicker();
+            });
+            this.document.keyup(function (e) {
+                return _this.hideDatepicker(e);
+            });
+        }
+    }, {
+        key: 'showDatepicker',
+        value: function showDatepicker() {
+            this.pickerButton.hide();
+            this.pickerInputs.show();
+        }
+    }, {
+        key: 'hideDatepicker',
+        value: function hideDatepicker(e) {
+            if (e.keyCode == 27) {
+                this.pickerButton.show();
+                this.pickerInputs.hide();
+            }
+        }
+    }]);
+
+    return DashboardDatepicker;
+}();
+
+exports.default = DashboardDatepicker;
 
 /***/ })
 /******/ ]);

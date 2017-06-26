@@ -44,10 +44,12 @@ $debug = 1;
         <!-- amCharts plugins -->
         <link rel="stylesheet" href="//www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
         <link rel="stylesheet" href="//www.amcharts.com/lib/3/plugins/export/export.css">
+        <link rel="stylesheet" href="/includes/styles/styles.css">
         <!-- END THE CUSTOM PLUGIN STYLES -->
 
-        <link rel="shortcut icon" href="favicon.ico" /> </head>
-    <!-- END HEAD -->
+        <link rel="shortcut icon" href="favicon.ico" />
+    </head>
+        <!-- END HEAD -->
 
     <body class="page-container-bg-solid page-header-fixed page-sidebar-closed-hide-logo page-md">
         <!-- BEGIN HEADER -->

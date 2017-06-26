@@ -19,27 +19,6 @@ php = require('gulp-connect-php'),
 browserSync = require('browser-sync'),
 reload  = browserSync.reload;
 
-gulp.task('php', function() {
-    php.server({ base: './', port: 3000, keepalive: true});
-});
-
-gulp.task('browser-sync',['php'], function() {
-    browserSync({
-        proxy: '127.0.0.1:3000',
-        port: 8080,
-        open: false,
-        notify: false
-    });
-
-    // browserSync.init({
-    //    server: {
-    //        baseDir: '/',
-    //    }
-    // });
-});
-gulp.task('default', ['browser-sync'], function () {
-    gulp.watch(['./*.php'], [reload]);
-});
 
 //*** Localhost server tast
 // gulp.task('localhost', function() {
@@ -165,12 +144,37 @@ gulp.task('prettify', function() {
     pipe(gulp.dest('./'));
 });
 
+
+gulp.task('default', ['browser-sync'], function () {
+
+});
+
+
 gulp.task('watch', function(){
+
+    gulp.task('php', function() {
+        php.server({ base: './', port: 3000, keepalive: true});
+    });
+
+    gulp.task('browser-sync',['php'], function() {
+        browserSync.create({
+            proxy: '127.0.0.1:3000',
+            port: 3000,
+            open: false,
+            notify: false,
+            reload: true
+        });
+    });
+
+    gulp.watch(['./*.php'], [reload]);
+
     gulp.watch('./assets/scripts/**/*.js', function(){
         gulp.start('scripts');
+        browserSync.reload();
     });
 
     gulp.watch('./assets/styles/**/*.css', function(){
         gulp.start('styles');
+        browserSync.reload();
     });
 });

@@ -7,7 +7,7 @@ class NotificationsMenu {
     events(){
         this.notificationsMenu.click(
                 () => {
-                    console.log('Notifications clicked');
+                    console.log('We can load the notifications on this call');
                 }
             );
     }

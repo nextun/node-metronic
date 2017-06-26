@@ -404,6 +404,7 @@
                     <li class="dropdown dropdown-extended quick-sidebar-toggler">
                         <span class="sr-only">Toggle Quick Sidebar</span>
                         <i class="icon-logout"></i>
+                        <span class="badge badge-danger header__badge" >8</span>
                     </li>
                     <!-- END QUICK SIDEBAR TOGGLER -->
                 </ul>
