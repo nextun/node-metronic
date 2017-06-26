@@ -145,10 +145,6 @@ gulp.task('prettify', function() {
 });
 
 
-gulp.task('default', ['browser-sync'], function () {
-
-});
-
 gulp.task('php', function() {
     php.server({ base: './', port: 3000, keepalive: true});
 });
@@ -158,26 +154,14 @@ gulp.task('browser-sync',['php'], function() {
         proxy: '127.0.0.1:3000',
         port: 3000,
         open: false,
-        notify: false,
-        reload: true
+        notify: false
     });
 });
 
-<<<<<<< HEAD
-    gulp.task('browser-sync',['php'], function() {
-        browserSync.create({
-            proxy: '127.0.0.1:3000',
-            port: 3000,
-            open: false,
-            notify: false
-        });
-    });
-=======
 
 gulp.task('watch', function(){
 
     gulp.start('php');
->>>>>>> a7f7a225d9674bfb606b1da4050b75fbdcaf2346
 
     gulp.watch(['./*.php'], [reload]);
 

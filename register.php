@@ -1,5 +1,7 @@
+<?php
+require_once "includes/init.php";
+?>
 <!DOCTYPE html>
-
 <!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
 <!--[if !IE]><!-->
@@ -33,6 +35,7 @@
     <link href="../assets/pages/css/login-5.min.css" rel="stylesheet" type="text/css" />
     <!-- END PAGE LEVEL STYLES -->
     <!-- BEGIN THEME LAYOUT STYLES -->
+    <link rel="stylesheet" href="includes/styles/styles.css">
     <!-- END THEME LAYOUT STYLES -->
     <link rel="shortcut icon" href="favicon.ico" /> </head>
 <!-- END HEAD -->
@@ -41,18 +44,18 @@
 <!-- BEGIN : LOGIN PAGE 5-2 -->
 <div class="user-login-5">
     <div class="row bs-reset">
-        <div class="col-md-4 login-container bs-reset">
+        <div class="col-md-6 login-container bs-reset">
             <img class="login-logo login-6" src="../assets/pages/img/login/login-invert.png" />
             <div class="login-content">
-                <h1>Metronic Admin Login</h1>
-                <p> Lorem ipsum dolor sit amet, coectetuer adipiscing elit sed diam nonummy et nibh euismod aliquam erat volutpat. Lorem ipsum dolor sit amet, coectetuer adipiscing. </p>
+                <h1>Register an Account</h1>
+                <p> Simply fill out the form below to create your account. All fields are required. </p>
                 <form action="javascript:;" class="login-form" method="post">
                     <div class="alert alert-danger display-hide">
                         <button class="close" data-close="alert"></button>
-                        <span>Enter any username and password. </span>
+                        <span>Please fill out all the fields which are highlighted in red. </span>
                     </div>
                     <div class="row">
-                        <div class="form-group col-xs-12">
+                        <div class="form-group col-sm-6">
                             <input
                                     class="form-control form-control-solid placeholder-no-fix form-group"
                                     type="text"
@@ -62,27 +65,7 @@
                                     required
                             />
                         </div>
-                        <div class="form-group col-xs-12">
-                            <input
-                                    class="form-control form-control-solid placeholder-no-fix form-group"
-                                    type="text"
-                                    autocomplete="off"
-                                    placeholder="Email Address"
-                                    name="email"
-                                    required
-                            />
-                        </div>
-                        <div class="form-group col-xs-12">
-                            <input
-                                    class="form-control form-control-solid placeholder-no-fix form-group"
-                                    type="text"
-                                    autocomplete="off"
-                                    placeholder="Email Confirm"
-                                    name="email2"
-                                    required
-                            />
-                        </div>
-                        <div class="form-group col-xs-12">
+                        <div class="form-group col-sm-6">
                             <input
                                     class="form-control form-control-solid placeholder-no-fix form-group"
                                     type="text"
@@ -92,7 +75,27 @@
                                     required
                             />
                         </div>
-                        <div class="form-group col-xs-12">
+                        <div class="form-group col-sm-6">
+                            <input
+                                    class="form-control form-control-solid placeholder-no-fix form-group"
+                                    type="text"
+                                    autocomplete="off"
+                                    placeholder="Email Address"
+                                    name="email"
+                                    required
+                            />
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <input
+                                    class="form-control form-control-solid placeholder-no-fix form-group"
+                                    type="text"
+                                    autocomplete="off"
+                                    placeholder="Email Confirm"
+                                    name="email2"
+                                    required
+                            />
+                        </div>
+                        <div class="form-group col-sm-6">
                             <input
                                     class="form-control form-control-solid placeholder-no-fix form-group"
                                     type="text"
@@ -102,7 +105,7 @@
                                     required
                             />
                         </div>
-                        <div class="form-group col-xs-12">
+                        <div class="form-group col-sm-6">
                             <input
                                     class="form-control form-control-solid placeholder-no-fix form-group"
                                     type="text"
@@ -112,7 +115,7 @@
                                     required
                             />
                         </div>
-                        <div class="form-group col-xs-12">
+                        <div class="form-group col-sm-6">
                             <input
                                     class="form-control form-control-solid placeholder-no-fix form-group"
                                     type="text"
@@ -122,13 +125,34 @@
                                     required
                             />
                         </div>
-                        <div class="form-group col-xs-12">
+                        <div class="form-group col-sm-6">
                             <input
                                     class="form-control form-control-solid placeholder-no-fix form-group"
                                     type="text"
                                     autocomplete="off"
                                     placeholder="Postcode"
                                     name="postcode"
+                                    required
+                            />
+                        </div>
+                        <hr />
+                        <div class="form-group col-sm-6">
+                            <input
+                                    class="form-control form-control-solid placeholder-no-fix form-group"
+                                    type="password"
+                                    autocomplete="off"
+                                    placeholder="Password"
+                                    name="password1"
+                                    required
+                            />
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <input
+                                    class="form-control form-control-solid placeholder-no-fix form-group"
+                                    type="password"
+                                    autocomplete="off"
+                                    placeholder="Password Confirm"
+                                    name="password2"
                                     required
                             />
                         </div>
@@ -155,8 +179,8 @@
                     <div class="form-group">
                         <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="Email" name="email" /> </div>
                     <div class="form-actions">
-                        <button type="button" id="back-btn" class="btn blue btn-outline">Back</button>
-                        <button type="submit" class="btn blue uppercase pull-right">Submit</button>
+                        <button type="button" id="back-btn" class="btn red btn-outline">Back</button>
+                        <button type="submit" class="btn red uppercase pull-right">Submit</button>
                     </div>
                 </form>
                 <!-- END FORGOT PASSWORD FORM -->
@@ -184,13 +208,13 @@
                     </div>
                     <div class="col-xs-7 bs-reset">
                         <div class="login-copyright text-right">
-                            <p>Copyright &copy; Keenthemes 2015</p>
+                            <p>&copy; Salon Administrator 2016 - <?php echo date('Y') ?></p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-8 bs-reset">
+        <div class="col-md-6 bs-reset">
             <div class="login-bg"> </div>
         </div>
     </div>

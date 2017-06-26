@@ -1,6 +1,11 @@
 .btn .btn-success {
     background-color: red;
 }
+@media screen and (min-width: 992px) {
+    .user-login-5 .login-container>.login-content{
+        margin-top: 20%;
+    }
+}
 .dashboard__datepicker__inputs {
     display: none;
     &__trigger {

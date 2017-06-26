@@ -1,11 +1,5 @@
 <?php
-session_start();
-
-// SET THE TIMEZONE
-date_default_timezone_set('Europe/London');
-
-// TOGGLE THE APPLICATION'S DEBUG STATUS
-$debug = 1;
+    require_once "includes/init.php";
 ?>
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
