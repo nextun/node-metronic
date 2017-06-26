@@ -1,5 +1,5 @@
 .btn .btn-success {
-    color: red;
+    background-color: red;
 }
 .dashboard__datepicker__inputs {
     display: none;
@@ -7,9 +7,6 @@
         margin-right: 10px;
      }
 
-     &__applyBtn {
-        color: red;
-      }
 }
 .header__badge {
     margin: -5px 0 0 5px;
