@@ -10409,8 +10409,8 @@ var DashboardDatepicker = function () {
 
         this.pickerButton = (0, _jquery2.default)('.dashboard__datepicker__inputs__trigger');
         this.pickerInputs = (0, _jquery2.default)('.dashboard__datepicker__inputs');
+        this.daterangepickerListElements = (0, _jquery2.default)('.ranges').first('li').addClass('foo');
         this.document = (0, _jquery2.default)(document);
-
         this.events();
     }
 
@@ -10424,6 +10424,10 @@ var DashboardDatepicker = function () {
             });
             this.document.keyup(function (e) {
                 return _this.hideDatepicker(e);
+            });
+            this.daterangepickerListElements.each(function () {
+                (0, _jquery2.default)(this).addClass('foo');
+                console.log(this);
             });
         }
     }, {
