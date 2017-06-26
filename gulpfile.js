@@ -149,22 +149,24 @@ gulp.task('default', ['browser-sync'], function () {
 
 });
 
+gulp.task('php', function() {
+    php.server({ base: './', port: 3000, keepalive: true});
+});
+
+gulp.task('browser-sync',['php'], function() {
+    browserSync.create({
+        proxy: '127.0.0.1:3000',
+        port: 3000,
+        open: false,
+        notify: false,
+        reload: true
+    });
+});
+
 
 gulp.task('watch', function(){
 
-    gulp.task('php', function() {
-        php.server({ base: './', port: 3000, keepalive: true});
-    });
-
-    gulp.task('browser-sync',['php'], function() {
-        browserSync.create({
-            proxy: '127.0.0.1:3000',
-            port: 3000,
-            open: false,
-            notify: false,
-            reload: true
-        });
-    });
+    gulp.start('php');
 
     gulp.watch(['./*.php'], [reload]);
 

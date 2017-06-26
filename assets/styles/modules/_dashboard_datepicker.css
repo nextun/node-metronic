@@ -3,4 +3,8 @@
     &__trigger {
         margin-right: 10px;
      }
+
+     &__applyBtn {
+        color: red;
+      }
 }
