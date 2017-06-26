@@ -239,9 +239,9 @@
 
         <div class="m-grid m-grid-demo">
             <div class="m-grid-row">
-                <div class="m-grid-col-sm-12 m-grid-col-md-12 m-grid-col-lg-6 m-grid-col m-grid-col-top m-grid-col-center">
+                <div class="m-grid-col-sm-12 m-grid-col-md-12 m-grid-col-lg-6 m-grid-col m-grid-col-top m-grid-col-center" style="padding-right: 15px; border: none; background-color: transparent;">
 
-                    <div class="portlet light" style="height: 100%; ">
+                    <div class="portlet light" style="height: 100%;">
 
                         <div class="portlet-title">
 
