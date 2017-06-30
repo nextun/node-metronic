@@ -8,7 +8,8 @@ nested = require('postcss-nested');
 
 gulp.task('styles', function(){
     return gulp.src('./assets/styles/styles.css')
-        .pipe(postcss([nested, cssvars, postcssImport, autoprefixer, mixins ]))
+        .pipe(postcss([postcssImport, cssvars, nested, autoprefixer, mixins]))
         .pipe(gulp.dest('./includes/styles'));
 });
 
+//

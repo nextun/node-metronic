@@ -146,13 +146,13 @@ gulp.task('prettify', function() {
 
 
 gulp.task('php', function() {
-    php.server({ base: './', port: 3000, keepalive: true});
+    php.server({ base: './', port: 3001, keepalive: true});
 });
 
 gulp.task('browser-sync',['php'], function() {
     browserSync.create({
-        proxy: '127.0.0.1:3000',
-        port: 3000,
+        proxy: '127.0.0.1:3001',
+        port: 3001,
         open: false,
         notify: false
     });

@@ -1,18 +1,67 @@
 .btn .btn-success {
     background-color: red;
 }
+/* Lift the login form container up a tadge */
 @media screen and (min-width: 992px) {
     .user-login-5 .login-container>.login-content{
         margin-top: 20%;
     }
 }
+/* Change the background colour of the login background screen */
+body.login {
+    background-color: transparent!important;
+}
+/* Overwrite the active tab bottom border */
+.tabbable-line>.nav-tabs>li.active,.tabbable-line>.nav-tabs>li.active:hover {
+    border-bottom: 4px solid #337ab7;
+}
+/* Overwrite the tab hover border */
+.tabbable-line>.nav-tabs>li.open,.tabbable-line>.nav-tabs>li:hover{
+    background:0 0;border-bottom:4px solid lightskyblue;
+}
+/* Make a shadow and bottom border on the main nav element */
+.page-header.navbar.navbar-fixed-top,.page-header.navbar.navbar-static-top {
+    z-index: 9995;
+    border-bottom: 1px solid lightgrey;
+    -webkit-box-shadow: 2px 2px 5px lightgrey;
+            box-shadow: 2px 2px 5px lightgrey;
+}
+/* Make the icon outlines in the header more prominent */
+.page-header.navbar .top-menu .navbar-nav>li.dropdown .dropdown-toggle>i,.page-header.navbar .top-menu .navbar-nav>li.quick-sidebar-toggler>i,
+.page-header.navbar .top-menu .navbar-nav>li.quick-sidebar-toggler>i:hover,
+.page-header.navbar .search-form .input-group .input-group-btn .btn.submit>i,
+.page-header.navbar .search-form .input-group .form-control
+{
+    color: grey;
+}
+.page-header.navbar .search-form .input-group,.page-header.navbar .search-form .input-group:hover {
+    border: 1px solid grey;
+    border-radius: 5px!important;
+}
+.page-header.navbar .menu-toggler {
+    background-image: url(/assets/layouts/layout4/img/sidebar-toggle-dark.png);
+}
 .dashboard__datepicker__inputs {
     display: none;
-    &__trigger {
+}
+.dashboard__datepicker__inputs__trigger {
         margin-right: 10px;
      }
-
-}
 .header__badge {
     margin: -5px 0 0 5px;
 }
+.activation_page {
+    text-align: center;
+    width: 500px!important;
+    border: 1px solid lightgrey;
+    -webkit-box-shadow: 2px 3px 8px lightgrey;
+            box-shadow: 2px 3px 8px lightgrey;
+}
+.activation_page__main_heading {
+
+ }
+.activation_page__content {
+
+ }
+
+

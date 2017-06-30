@@ -1,6 +1,11 @@
 <div class="page-content-wrapper">
     <!-- BEGIN CONTENT BODY -->
     <div class="page-content">
+        <!-- BEGIN ALERT -->
+
+        <?php require "includes/partials/_alerts.php"; ?>
+
+        <!-- END ALERT -->
         <!-- BEGIN PAGE HEAD-->
         <div class="page-head">
             <!-- BEGIN PAGE TITLE -->

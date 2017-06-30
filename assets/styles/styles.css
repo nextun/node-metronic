@@ -2,3 +2,6 @@
 @import './_overrides';
 @import './modules/_dashboard_datepicker';
 @import './modules/_header';
+@import './modules/_activation_page';
+
+

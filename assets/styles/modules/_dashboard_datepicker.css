@@ -1,7 +1,8 @@
 .dashboard__datepicker__inputs {
-    display: none;
+
     &__trigger {
         margin-right: 10px;
      }
-
+    display: none;
 }
+

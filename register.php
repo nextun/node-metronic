@@ -47,7 +47,7 @@ require_once "includes/init.php";
         <div class="col-md-6 login-container bs-reset">
             <img class="login-logo login-6" src="../assets/pages/img/login/login-invert.png" />
             <div class="login-content">
-                <h1>Register an Account</h1>
+                <h1 class="font-blue-steel">Register an Account</h1>
                 <p> Simply fill out the form below to create your account. All fields are required. </p>
                 <form action="javascript:;" class="login-form" method="post">
                     <div class="alert alert-danger display-hide">
@@ -165,25 +165,10 @@ require_once "includes/init.php";
                             </label>
                         </div>
                         <div class="col-sm-8 text-right">
-                            <div class="forgot-password">
-                                <a href="javascript:;" id="forget-password" class="forget-password">Forgot Password?</a>
-                            </div>
                             <button class="btn red btn-outline" type="submit">Sign In</button>
                         </div>
                     </div>
                 </form>
-                <!-- BEGIN FORGOT PASSWORD FORM -->
-                <form class="forget-form" action="javascript:;" method="post">
-                    <h3>Forgot Password ?</h3>
-                    <p> Enter your e-mail address below to reset your password. </p>
-                    <div class="form-group">
-                        <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="Email" name="email" /> </div>
-                    <div class="form-actions">
-                        <button type="button" id="back-btn" class="btn red btn-outline">Back</button>
-                        <button type="submit" class="btn red uppercase pull-right">Submit</button>
-                    </div>
-                </form>
-                <!-- END FORGOT PASSWORD FORM -->
             </div>
             <div class="login-footer">
                 <div class="row bs-reset">
